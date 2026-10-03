@@ -1,0 +1,8 @@
+The founder supplied a second character reference with 35 eye variants.
+Keep the original sheet unaltered. The report proposes five meanings
+for the device: quiet, working, a decision, completion, and offline.
+Vertical eyes remain the signature. These meanings need user testing.
+
+Validation: the supplied sheet loads, all five expressions change,
+report fragment links resolve, and the 390-pixel layout has no page
+ overflow. The PDF and standalone HTML were rebuilt.

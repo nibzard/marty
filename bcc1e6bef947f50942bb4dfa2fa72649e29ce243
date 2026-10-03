@@ -1,0 +1,16 @@
+# Context
+
+Create the public Steel Marty design report at the founder's request.
+Keep source facts, design proposals, and pilot targets distinct.
+
+The device is a proposed client for a persistent agent. The character
+comes from the founder's reference sheet and the martensite naming idea.
+Figure A displays the character on a monochrome e-paper screen.
+
+GitHub Pages builds from source on each push to main. Portable HTML
+embeds its assets. The PDF is a checked-in print snapshot. The demo QR
+code opens the public report; it does not provision real hardware.
+
+Validation: clean-directory build, local asset resolution, embedded
+export, PDF copy, and report fragment links passed. Earlier browser
+checks covered desktop, mobile, device states, and cost arithmetic.

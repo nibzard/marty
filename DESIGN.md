@@ -25,3 +25,7 @@ A small device-state simulator and a capacity cost model with adjustable assumpt
 ## Character
 
 Steel Marty takes his name from martensite. Use the founder’s supplied character sheet without alteration. Keep the faceted body and two blue eyes on color displays. Use a simple black silhouette with white eyes on CoreInk. State text and the last sync time remain authoritative. A pose changes only when the recorded state changes.
+
+## Eyes
+
+The founder supplied an eye exploration sheet. Keep vertical eyes as the signature. The proposed device vocabulary uses small dots for quiet, vertical lines for working, large dots for decisions, raised eyes for completion, and horizontal lines for offline. Confirm meanings in user tests at native resolution. Always include status text and the last sync time.

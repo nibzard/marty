@@ -13,7 +13,9 @@
     $('.screen').classList.toggle('pairing-screen',name==='pairing');
     $('#device-qr').hidden=name!=='pairing';
     $('#device-face').dataset.pose=name;
-    $('#device-eyes').setAttribute('d',name==='done'?'M26 40Q30 30 35 39M44 37Q48 27 53 36':name==='offline'?'M26 40H35M44 37H53':'M29 34L31 44M47 31L49 41');
+    const eyes={idle:'M30 39h.01M48 36h.01',working:'M29 34L31 44M47 31L49 41',approval:'M30 39h.01M48 36h.01',done:'M26 40Q30 30 35 39M44 37Q48 27 53 36',offline:'M26 40H35M44 37H53'};
+    $('#device-eyes').setAttribute('d',eyes[name]||eyes.working);
+    $('#device-eyes').setAttribute('stroke-width',name==='approval'?'9':'5');
     ['title','detail','left','right','sync'].forEach(k => $('#device-'+k).textContent=s[k]);
     $('#state-explanation').textContent=s.note;
     $('#device-allow').disabled=name!=='approval'; $('#device-deny').disabled=name!=='approval';

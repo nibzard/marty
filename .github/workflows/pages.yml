@@ -1,0 +1,36 @@
+name: Publish report
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the report
+        uses: actions/checkout@v6
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Build the report
+        run: python3 build_report.py
+      - name: Upload the report
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: output
+      - name: Publish to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
